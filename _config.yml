@@ -1,0 +1,43 @@
+title: Minh 's notes
+author: Minh PLQ
+github: https://github.com/minhplq
+about: Mình tên Minh, một back-end developer. Đây là nơi chia sẻ/lưu trữ vài kinh nghiệm/bài học/chú ý hay ho mà mình gặp trong công việc/cuộc sống hằng ngày
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "https://www.facebook.com/quangminh.phamlu/"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/minhplq/"
+    - icon: fa-github
+      link: "https://github.com/minhplq"
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+
+url: "https://minhplq.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
