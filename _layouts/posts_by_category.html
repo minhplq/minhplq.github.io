@@ -36,8 +36,8 @@ layout: default
           <div class="list-group">
         {% endif %}
       {% endif %}
-        <ul class="posts">
-          <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
+        <ul class="posts posts list-unstyled">
+          <li><i><span>{{ post.date | date_to_string }}</span></i> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
         </ul>
       {% if forloop.last %}
         </div>
