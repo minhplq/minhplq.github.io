@@ -28,3 +28,4 @@ Mục tiêu thì ở đây rồi, không biết là có thực hiện dược kh
 Một tuần tầm 2 bài chắc ổn nhỉ :))
 
 Give it my best shot!!
+![give it my best shot](../static/img/_posts/give-it-my-best-shot.png)
