@@ -29,4 +29,4 @@ Một tuần tầm 2 bài chắc ổn nhỉ :))
 
 Give it my best shot!!
 
-![give it my best shot](https://github.com/minhplq/minhplq.github.io/blob/main/static/img/_posts/give-it-my-best-shot.png)
+![give it my best shot](https://raw.githubusercontent.com/minhplq/minhplq.github.io/main/static/img/_posts/give-it-my-best-shot.png)
