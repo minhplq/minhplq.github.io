@@ -49,4 +49,5 @@ Hy vọng bài viết này có thể giúp các bạn dễ dàng hơn trong côn
 Happy Coding!!!
 
 P/s: à mà ngoài việc tự mình viết shell, các bạn còn có thể sử dụng các công cụ khác để làm.
+
 P/s 2: Ngoài Linux ra thì các OS khác (Mac và Windows) cũng hỗ trợ Shell đấy (với windows thì là command promt). Với cách làm tương tự, bạn cũng có thể tự động hoá bước này, nhưng Windows thì hơi khó để dùng đấy nhá!!!
