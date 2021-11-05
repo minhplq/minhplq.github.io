@@ -32,8 +32,80 @@ Mình sử dụng Python là ngôn ngữ chính, nên mình thiết lập môi t
 
 Cơ bản là như vậy, sau khi đã liệt kê các công cụ cần thiết theo thứ tự cài đặt trước sau, việc còn lại chỉ là viết Shell cho Linux nó tự chạy thôi
 
+Đây là ví dụ một file cơ bản mà mình chạy trên ubuntu, các distro khác tương tự nhé
+
 ```bash
-$
+# update OS
+
+sudo apt update \
+  && sudo apt upgrade -y \
+  && sudo apt autoclean -y \
+  && sudo apt autoremove -y \
+  && sudo snap refresh
+
+# go to Downloads folder
+
+cd ~/Downloads
+
+# install zsh - source: https://github.com/jotyGill/ezsh
+
+git clone https://github.com/jotyGill/ezsh
+./install.sh -c        # only run with '-c' the first time, running multiple times will duplicate history entries
+
+# install pyenv
+
+# Prerequisites
+sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+
+# auto install
+curl https://pyenv.run | bash
+
+# restart shell
+exec $SHELL
+
+# config for shell
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+echo 'eval "$(pyenv init --path)"' >> ~/.zprofile
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+echo 'eval "$(pyenv init --path)"' >> ~/.profile
+
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+# need to logout - login, and choose python version to install
+
+# install wget
+sudo apt install wget
+
+# download chrome.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo install ./google-chrome-stable_current_amd64.deb
+
+# install docker - source: https://github.com/docker/docker-install
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+# install dbeaver 
+wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo apt install ./dbeaver-ce_latest_amd64.deb
+
+# install vscode - source: https://code.visualstudio.com/docs/setup/linux
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code # or code-insiders
+
 ```
 
 Lưu đoạn bash này vào đâu đó, để các bạn có thể sử dụng ngay khi mới cài OS. Riêng mình thì mình lưu trên Gist - Một công cụ note của Github khá là hữu ích.
